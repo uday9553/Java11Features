@@ -7,6 +7,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandler;
 import java.net.http.HttpResponse.BodyHandlers;
+import java.time.Duration;
 
 public class HTTPExample {
 
@@ -18,7 +19,10 @@ public class HTTPExample {
 				.GET()
 				.build();
 		
-		HttpClient client=HttpClient.newBuilder().build();
+		HttpClient client=HttpClient
+				.newBuilder()
+				.connectTimeout(Duration.ofMinutes(1))
+				.build();
 		//from java11 httpcient java.incubator has been removed
 		//now it has to be imported from java.net.http
 		try {

@@ -9,7 +9,7 @@ public class StringAPIChanges {
 		String s1="Uday";
 		System.out.println(s1.isBlank());
 		
-		String s2="    ";
+		String s2="  \n  ";
 		System.out.println("checking s2 varible for blank "+s2.isBlank()); //return true
 		
 		String s3="aaaaa \n"+"bbbbbbb \n"+"cccccccc \n";
